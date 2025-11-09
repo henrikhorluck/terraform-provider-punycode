@@ -1,0 +1,37 @@
+---
+page_title: "{{.ProviderShortName}} Provider"
+description: |-
+  The Punycode provider provides functions for encoding and decoding internationalized domain names (IDN) using punycode (RFC 3492).
+---
+
+# {{.ProviderShortName}} Provider
+
+{{ .Description | trimspace }}
+
+> **Note** This provider was vibe-coded in a single session with Claude Sonnet 4.5. Use at your own risk!
+
+The Punycode provider provides functions for encoding and decoding internationalized domain names (IDN) using the punycode standard as defined in [RFC 3492](https://datatracker.ietf.org/doc/html/rfc3492).
+
+Punycode is a representation of Unicode with the limited ASCII character subset used for Internet host names. It's used to encode internationalized domain names (IDN) into ASCII-compatible encoding (ACE).
+
+## Example Usage
+
+{{ tffile "examples/basic.tf" }}
+
+## Available Functions
+
+This provider offers the following functions:
+
+- [`encode`](functions/encode.md) - Convert Unicode strings to punycode (ASCII-compatible encoding)
+- [`decode`](functions/decode.md) - Convert punycode strings back to Unicode
+
+## Use Cases
+
+The Punycode provider is useful for:
+
+- **DNS Configuration**: Converting international domain names to ASCII format for DNS records
+- **URL Processing**: Handling internationalized domain names in URLs
+- **Domain Registration**: Preparing international domain names for registration systems
+- **API Integration**: Working with systems that require ASCII-only domain names
+
+{{ .SchemaMarkdown | trimspace }}

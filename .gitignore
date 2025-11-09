@@ -27,3 +27,6 @@ vendor/
 # GoReleaser
 dist/
 *.sig
+
+# go-tools
+bin/

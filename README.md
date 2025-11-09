@@ -81,6 +81,22 @@ go build -o terraform-provider-punycode
 go test ./...
 ```
 
+### Generating Documentation
+
+The provider documentation is automatically generated using [terraform-plugin-docs](https://github.com/hashicorp/terraform-plugin-docs):
+
+```bash
+go generate ./...
+```
+
+This will update the documentation in the `docs/` directory based on:
+- Provider schema and function definitions
+- Templates in `templates/` directory  
+- Examples in `examples/` directory
+
+See [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md) for more details on the documentation structure.
+```
+
 ### Local Installation
 
 To use the provider locally during development:
